@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+    <title>World of Logo</title>
+    <style>
+		 @import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+		 *{
+  			margin: 0;
+  			padding: 0;
+  			box-sizing: border-box;
+  			font-family: 'Poppins', sans-serif;
+		}
+        body {
+            font-family: monospace;
+        }
+		html,body{
+ 			display: grid;
+  			height: 100vh;
+  			place-items: center;
+  			text-align: center;
+		}
+
+		#heading::before{
+		top: 0px;
+        left: 0px;
+        content: "";
+		background: linear-gradient(rgba(0,0,0,0.5),#22A29C) no-repeat center center/cover;
+        position: absolute;
+        height: 113%;
+        width: 100%;
+        z-index: -1;
+        opacity: 0.75;
+		}
+
+		#heading{
+			font-size: 2rem;
+			color: rgb(40, 21, 21);
+			text-shadow: 3px 2px rgb(11, 220, 220);
+			height: 55px;
+		}
+        .logo img {
+            height: 100px;
+            width: 160px;
+            border-radius: 50%;
+            /* margin: 10px 15px; */
+            /* border: 2px solid rgb(174, 75, 75); */
+        }
+
+        .logo img:hover {
+            transform: scale(0.95);
+        }
+
+
+		form {
+            background-color: #a4a4a4;
+			/* background: url('../Images/form\ image.jpg'); */
+			width: 600px;
+			margin: 50px auto;
+			padding: 30px 20px;
+			box-shadow: 12px 15px 15px rgba(0, 0, 0, 0.5);
+		}
+
+		.form-control {
+			text-align: left;
+			margin-bottom: 25px;
+		}
+
+		.form-control label {
+			display: block;
+			margin-bottom: 10px;
+		}
+
+		.form-control input,
+		.form-control select,
+		.form-control textarea {
+			border: 1px solid #777;
+			border-radius: 2px;
+			font-family: inherit;
+			padding: 10px;
+			display: block;
+			width: 95%;
+		}
+
+		.form-control input[type="radio"],
+		.form-control input[type="checkbox"] {
+			display: inline-block;
+			width: auto;
+		}
+
+		button {
+			background:transparent;
+			border: 2px solid #777;
+			border-radius: 20px;
+			font-family: inherit;
+			font-size: 21px;
+			display: block;
+			width: 100%;
+			margin-top: 50px;
+			margin-bottom: 20px;
+		}
+
+		button a{
+			text-decoration: none;
+		}
+
+		button:hover{
+            background-color: #00bfff;
+            transform: scale(1.05);
+		}
+
+		button a:hover{
+			color: black;
+			font-weight: bold;
+		}
+
+		.container{
+  			position: relative;
+  			width: 440px;
+  			padding: 20px 30px;
+  			border-radius: 5px;
+  			display: flex;
+  			align-items: center;
+  			justify-content: center;
+  			flex-direction: column;
+		}
+
+		.container .post{
+  			display: none;
+		}
+
+		.container .text{
+			font-size: 25px;
+  			color: #666;
+  			font-weight: 500;
+		}
+
+		.container .edit{
+  			position: absolute;
+  			right: 10px;
+  			top: 5px;
+  			font-size: 16px;
+ 			color: #666;
+  			font-weight: 500;
+  			cursor: pointer;
+		}
+
+		.container .edit:hover{
+  			text-decoration: underline;
+		}
+		
+		.container .star-widget input{
+  			display: none;
+		}
+
+		.star-widget label{
+			font-size: 40px;
+  			color: #444;
+  			padding: 10px;
+  			float: right;
+  			transition: all 0.2s ease;
+		}
+
+		input:not(:checked) ~ label:hover,
+		input:not(:checked) ~ label:hover ~ label{
+  			color: #fd4;
+		}
+
+		input:checked ~ label{
+  			color: #fd4;
+		}
+
+		input#rate-5:checked ~ label{
+  			color: rgb(241, 225, 98);
+  			text-shadow: 0 0 10px #952;
+		}
+
+		.container form{
+  			display: none;
+		}
+
+		input:checked ~ form{
+  			display: block;
+		}
+
+		footer {
+            border: 1px solid black;
+            background-color: rgb(22, 22, 22);
+        color: white;
+        padding: 3px 20px;
+		width: 1518px;
+      }
+
+      .center {
+        text-align: center;
+      }
+    </style>
+</head>
+<body>
+    <header id="heading">
+        <nav class="logo">
+            <a href="main.html"><img src="./Img/logo.png" alt="Image not Found" /></a>
+        </nav>
+    </header>
+
+    <form id="form" action="../Logo Website/front.html">
+
+		<div class="form-control">
+			<label for="name" id="label-name">Your Name: </label>
+
+			<input type="text" id="name" placeholder="Enter your name" />
+		</div>
+
+		<div class="form-control">
+			<label for="role" id="label-role">
+				Which option best describes you?
+			</label>
+			
+			<select name="role" id="role">
+				<option value="student">Select</option>
+				<option value="student">Student</option>
+				<option value="intern">Intern</option>
+				<option value="professional">Professional</option>
+				<option value="other">Other</option>
+			</select>
+		</div>
+
+		<div class="form-control">
+			<label>
+				Would you recommend our Website to other Companies?
+			</label>
+
+			<label for="recommed-1">
+				<input type="radio" id="recommed-1" name="recommed">Yes</input>
+			</label>
+			<label for="recommed-2">
+				<input type="radio" id="recommed-2" name="recommed">No</input>
+			</label>
+			<label for="recommed-3">
+				<input type="radio" id="recommed-3" name="recommed">Maybe</input>
+			</label>
+		</div>
+
+		<div class="form-control">
+			<label>Areas to work upon in our Website
+				<small>(Check all that apply)</small>
+			</label>
+			<label for="inp-1">
+				<input type="checkbox"
+					name="inp">User Experience</input></label>
+			<label for="inp-2">
+				<input type="checkbox"
+					name="inp">Potential Bugs</input></label>
+			<label for="inp-3">
+				<input type="checkbox"
+					name="inp">Lagging</input></label>
+			<label for="inp-4">
+				<input type="checkbox"
+					name="inp">Server Down</input></label>
+			<label for="inp-5">
+				<input type="checkbox"
+					name="inp">WebPage Optimization</input></label>
+		</div>
+
+		<button type="submit" value="submit">
+			<a href="index.html">Submit</a>
+		</button>
+			</div>
+		</div>
+	</form>
+	<footer>
+		<div class="center">
+		  Copyright &copy; www.WorldofLogo.com. All rights Reserved..!!
+		</div>
+	</footer>
+</body>
+</html>

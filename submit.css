@@ -1,0 +1,243 @@
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+#submit::before {
+  top: 0px;
+  left: 0px;
+  content: "";
+  background: linear-gradient(rgba(0, 0, 0, 0.5), #22a29c) no-repeat center
+    center/cover;
+  position: absolute;
+  height: 135%;
+  width: 100%;
+  z-index: -1;
+  opacity: 0.75;
+}
+
+.header {
+  margin-top: 10px;
+  font-size: 2rem;
+  color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: Arial, Helvetica, sans-serif;
+  text-shadow: 3px 2px rgb(11, 220, 220);
+}
+
+.sample {
+  font-size: 1.8rem;
+  color: rgb(16, 13, 23);
+  text-shadow: 3px 2px 15px rgb(11, 220, 220);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  position: relative;
+  margin-top: 70px;
+}
+.logo a img {
+  position: relative;
+  margin-top: 100px;
+  display: inline;
+  height: 200px;
+}
+
+img {
+  border: 2px solid grey;
+  border-radius: 25px;
+  margin: 0px 50px 0px 50px;
+}
+
+.heading h1 {
+  font-size: 3rem;
+  color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: Arial, Helvetica, sans-serif;
+  text-shadow: 3px 2px aqua;
+}
+
+.heading h3 {
+  font-size: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: Arial, Helvetica, sans-serif;
+  text-shadow: 3px 2px 15px rgb(11, 220, 220);
+}
+
+html,
+body {
+  display: grid;
+  height: 100%;
+  place-items: center;
+  text-align: center;
+}
+
+.container {
+  position: relative;
+  width: 400px;
+  padding: 20px 30px;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin-top: 25px;
+}
+
+.container .post {
+  display: none;
+}
+
+.container .text {
+  font-size: 25px;
+  color: #666;
+  font-weight: 500;
+}
+
+.container .edit {
+  position: absolute;
+  right: 10px;
+  top: 5px;
+  font-size: 16px;
+  color: #666;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.container .edit:hover {
+  text-decoration: underline;
+}
+
+.container .star-widget input {
+  display: none;
+}
+
+.star-widget label {
+  font-size: 40px;
+  color: #444;
+  padding: 10px;
+  float: right;
+  transition: all 0.2s ease;
+}
+
+input:not(:checked) ~ label:hover,
+input:not(:checked) ~ label:hover ~ label {
+  color: #fd4;
+}
+
+input:checked ~ label {
+  color: #fd4;
+}
+
+input#rate-5:checked ~ label {
+  color: #fe7;
+  text-shadow: 0 0 20px #952;
+}
+
+#rate-1:checked ~ form header:before {
+  content: "I just hate it 😖😖";
+}
+
+#rate-2:checked ~ form header:before {
+  content: "I dont like it 😔😔";
+}
+
+#rate-3:checked ~ form header:before {
+  content: "It is awesome 😎😎";
+}
+
+#rate-4:checked ~ form header:before {
+  content: "I just like it 🤩🤩";
+}
+
+#rate-5:checked ~ form header:before {
+  content: "I just love it 😍😍";
+}
+
+.container form {
+  display: none;
+}
+
+input:checked ~ form {
+  display: block;
+}
+
+form header {
+  width: 100%;
+  font-size: 40px;
+  color: rgb(9, 9, 9);
+  text-shadow: 3px 2px 15px aqua;
+  font-weight: bold;
+  margin: 5px 0 20px 0;
+  text-align: center;
+  transition: all 0.2s ease;
+}
+
+form .textarea {
+  height: 100px;
+  width: 100%;
+  overflow: hidden;
+}
+
+form .textarea textarea {
+  height: 100%;
+  width: 100%;
+  outline: none;
+  border: 2px solid #333;
+  background: white;
+  padding: 10px;
+  font-size: 17px;
+  resize: none;
+}
+
+.textarea textarea:focus {
+  border-color: #444;
+}
+
+form .btn {
+  height: 45px;
+  width: 100%;
+  margin: 15px 0;
+}
+
+form .btn button {
+  height: 100%;
+  width: 100%;
+  border: 1px solid #444;
+  border-radius: 20px;
+  outline: none;
+  background: #222;
+  color: #999;
+  font-size: 17px;
+  font-weight: 500;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+form .btn button:hover {
+  background: #1b1b1b;
+  color: white;
+}
+
+footer {
+  /* font-size: 1.05rem;
+  border: 1px solid black;
+  background-color: rgb(6, 6, 6); */
+  /* color: white; */
+  /* padding: 9px 20px; */
+  position: fixed;
+  bottom: 0;
+  /* width: 100%;
+  height: 1.5%; */
+}
+
+.center {
+  text-align: center;
+}

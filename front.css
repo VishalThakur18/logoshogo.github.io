@@ -1,0 +1,120 @@
+*
+{
+	margin: 0;
+	padding: 0;
+	font-family: 'Poppins', sans-serif;
+
+}
+#banner
+{
+	background: linear-gradient(rgba(0,0,0,0.5),#22A29C);
+
+	background-size: cover;
+	background-position:center ;
+	height: 100vh;
+}
+.logo
+{
+    width: 140px;
+    height:100px;
+    position: absolute;
+    left: 2%;
+    top: 2%;
+     }
+img:hover{
+	cursor: pointer;
+}
+
+ .banner-text
+ {
+ 	text-align: center;
+ 	color: white;
+ 	padding-top:180px ;
+
+ }
+ .banner-text h1
+ {
+ 	font-size: 120px;
+ 	 font-family: 'kaushan script', cursive;
+ 	 font-weight: bold;
+	 color: transparent;
+	 -webkit-text-stroke: 1px #fff;
+	 background: url(./Img/back.png);
+	 -webkit-background-clip:text;
+	 background-position: 0 0;
+	 animation: back 20s linear infinite;
+ }
+ @keyframes back{
+	 100%{
+		background-position: 2000px 0;
+
+	 }
+
+ }
+ .banner-text p
+ {
+ 	font-size: 24px;
+ 	font-style: italic;
+ 	font-weight: bold;
+ 	color: whitesnow;
+ 	font-family:cursive ;
+ }
+ .button
+ {
+ 	margin:70px auto 0 ;
+ }
+  .button a
+  {
+ width: 150px;
+ text-decoration: none;
+ color: white;
+ font-weight: bold;
+ display: inline-block;
+ margin: 0 10px;
+ padding: 12px 0;
+ border: 2px solid white;
+ position: relative;
+ z-index: 1;
+  }
+
+  .button a span
+  {
+  	width: 0%;
+  	height: 100%;
+  	position: absolute;
+  	top:0;
+  	left:0;
+   background:white ;
+   z-index: -1;
+   transition: 0.5s;
+
+  }
+  .button a:hover span	
+  {
+  	width: 100%;
+  }
+  .button a:hover 
+  {
+  	color: black;
+  }
+  .about a{
+	  text-decoration: none;
+	  color: azure;
+	  padding-top: 5px;
+	  position: relative;
+  }
+  .about a::after{
+	  content: '';
+	  width: 0%;
+	  height: 3px;
+	  position: absolute;
+	  bottom: -5px;
+	  left: 50%;
+	  transform: translateX(-50%);
+	  background: #fff;
+	  transition: width 0.3s;
+  }
+  .about a:hover::after{
+	  width: 100%;
+
+  }
